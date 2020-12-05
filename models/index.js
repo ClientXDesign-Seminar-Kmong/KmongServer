@@ -1,37 +1,33 @@
-'use strict';
-
-const fs = require('fs');
-const path = require('path');
 const Sequelize = require('sequelize');
-const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
-const config = require(__dirname + '/../config/config.json')[env];
+const config = require('../config/config.json')[env];
 const db = {};
-
 let sequelize;
 if (config.use_env_variable) {
-  sequelize = new Sequelize(process.env[config.use_env_variable], config);
+ sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
-  sequelize = new Sequelize(config.database, config.username, config.password, config);
+ sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
-
-fs
-  .readdirSync(__dirname)
-  .filter(file => {
-    return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
-  })
-  .forEach(file => {
-    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
-    db[model.name] = model;
-  });
-
-Object.keys(db).forEach(modelName => {
-  if (db[modelName].associate) {
-    db[modelName].associate(db);
-  }
-});
-
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+db.User=require('./user')(sequelize,Sequelize)
+db.Service=require('./service')(sequelize,Sequelize)
+db.Review=require('./review')(sequelize,Sequelize)
+db.Logo=require('./logo')(sequelize,Sequelize)
+db.Recommend=require('./recommend')(sequelize,Sequelize)
+db.Banner=require('./banner')(sequelize,Sequelize)
+
+db.Service.hasMany(db.User,{onDelete:'cascade',as:'Expert'})
+db.User.belongsTo(db.Service)
+db.Service.hasMany(db.Logo,{onDelete:'cascade'})
+db.Logo.belongsTo(db.Service)
+db.Service.hasMany(db.Review,{onDelete:'cascade'})
+db.Review.belongsTo(db.Service)
+
+db.Service.belongsToMany(db.User,{through:'Like'})
+db.User.belongsToMany(db.Service,{through:'Like'})
+
+db.Service.belongsToMany(db.Recommend,{through:'ServiceList'})
+db.Recommend.belongsToMany(db.Service,{through:'ServiceList'})
 
 module.exports = db;
