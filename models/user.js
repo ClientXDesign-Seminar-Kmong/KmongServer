@@ -19,7 +19,7 @@ module.exports=function async(sequelize,DataTypes){
             type:DataTypes.INTEGER,
         },
         membership:{
-            type:DataTypes.INTEGER,
+            type:DataTypes.STRING,
         }
     },{
         freezeTableName:true

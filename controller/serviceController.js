@@ -12,5 +12,8 @@ module.exports={
     },
     similarService:async(req,res)=>{
 
+    },
+    serviceDetailImg:async(req,res)=>{
+        
     }
 }

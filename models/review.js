@@ -7,7 +7,7 @@ module.exports=function async(sequelize,DataTypes){
             type : DataTypes.INTEGER,
         },
         logoType:{
-            type : DataTypes.INTEGER,
+            type : DataTypes.STRING,
         },
         review:{
             type : DataTypes.STRING,

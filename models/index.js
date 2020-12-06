@@ -16,6 +16,7 @@ db.Review=require('./review')(sequelize,Sequelize)
 db.Logo=require('./logo')(sequelize,Sequelize)
 db.Recommend=require('./recommend')(sequelize,Sequelize)
 db.Banner=require('./banner')(sequelize,Sequelize)
+db.ServiceImg=require('./serviceImg')(sequelize,Sequelize)
 
 db.Service.hasMany(db.User,{onDelete:'cascade',as:'Expert'})
 db.User.belongsTo(db.Service)
@@ -23,6 +24,9 @@ db.Service.hasMany(db.Logo,{onDelete:'cascade'})
 db.Logo.belongsTo(db.Service)
 db.Service.hasMany(db.Review,{onDelete:'cascade'})
 db.Review.belongsTo(db.Service)
+
+db.Service.hasMany(db.ServiceImg,{onDelete:'cascade'})
+db.ServiceImg.belongsTo(db.Service)
 
 db.Service.belongsToMany(db.User,{through:'Like'})
 db.User.belongsToMany(db.Service,{through:'Like'})

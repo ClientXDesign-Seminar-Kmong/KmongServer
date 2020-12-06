@@ -5,13 +5,14 @@ const optionController = require('../../controller/optionController')
 const userController = require('../../controller/userController')
 const reviewController = require('../../controller/reviewController')
 
-router.get('/:idx',serviceController.serviceTop)//서비스 상단api
-router.get('/:idx/description',serviceController.serviceDescription)//서비스 설명api
-router.get('/:idx/option/:logo',optionController.serviceOption)//서비스 옵션api
-router.post('/:idx/option/:logo',optionController.setServiceOption)//서비스 옵션 보내기api
-router.get('/:idx/expert',userController.userInfo)
-router.get('/:idx/review',reviewController.reviewDetail)
-router.post('/:idx/like',userController.like)
-router.get('/:idx/similar',serviceController.similarService)
+router.get('/:idx',serviceController.serviceTop)//현종
+router.get('/:idx/detailImg',serviceController.serviceDetailImg)
+router.get('/:idx/description',serviceController.serviceDescription)//현종
+router.get('/:idx/option/:logo',optionController.serviceOption)//주은
+router.post('/:idx/option/:logo',optionController.setServiceOption)//주은
+router.get('/:idx/expert',userController.userInfo)//주은
+router.get('/:idx/review',reviewController.reviewDetail)//주은
+router.post('/:idx/like',userController.like)//주은
+router.get('/:idx/similar',serviceController.similarService)//현종
 
 module.exports=router
