@@ -7,4 +7,7 @@ module.exports={
 
     RECOMMEND_FAIL:"추천리스트불러오기 실패",
     RECOMMEND_SUCCESS:"추천리스트불러오기 성공",
+
+    SERVICE_TOP_FAIL:"서비스 상단 정보 불러오기 실패",
+    SERVICE_TOP_SUCCESS:"서비스 상단 정보 불러오기 성공"
 }

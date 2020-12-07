@@ -6,7 +6,6 @@ const userController = require('../../controller/userController')
 const reviewController = require('../../controller/reviewController')
 
 router.get('/:idx',serviceController.serviceTop)//현종
-router.get('/:idx/detailImg',serviceController.serviceDetailImg)
 router.get('/:idx/description',serviceController.serviceDescription)//현종
 router.get('/:idx/option/:logo',optionController.serviceOption)//주은
 router.post('/:idx/option/:logo',optionController.setServiceOption)//주은
