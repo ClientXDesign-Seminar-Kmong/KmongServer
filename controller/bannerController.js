@@ -12,7 +12,7 @@ module.exports={
             }
             return res.status(statusCode.OK).send(util.success(statusCode.OK,responseMessage.BANNER_SUCCESS,banners))
         }catch(err){
-            return res.status(statusCode.BAD_REQUEST).send(util.fail(statusCode.BAD_REQUEST,responseMessage.BANNER_FAIL))
+            return res.status(statusCode.INTERNAL_SERVER_ERROR).send(util.fail(statusCode.INTERNAL_SERVER_ERROR,responseMessage.BANNER_FAIL))
         }
     }
 }
