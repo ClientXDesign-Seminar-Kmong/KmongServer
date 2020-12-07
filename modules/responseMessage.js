@@ -4,4 +4,7 @@ module.exports={
     UNAUTHORIZED:"권한없음",
     BANNER_FAIL:"베너가져오기 실패",
     BANNER_SUCCESS:"배너가져오기 성공",
+
+    RECOMMEND_FAIL:"추천리스트불러오기 실패",
+    RECOMMEND_SUCCESS:"추천리스트불러오기 성공",
 }

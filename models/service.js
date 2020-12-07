@@ -4,7 +4,7 @@ module.exports=function async(sequelize,DataTypes){
             type:DataTypes.STRING,
             allowNull:false
         },
-        start:{
+        star:{
             type:DataTypes.INTEGER
         },
         price:{
@@ -14,6 +14,9 @@ module.exports=function async(sequelize,DataTypes){
             type:DataTypes.STRING
         },
         heart:{
+            type:DataTypes.INTEGER
+        },
+        review:{
             type:DataTypes.INTEGER
         },
         layer:{
