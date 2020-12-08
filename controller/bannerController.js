@@ -7,7 +7,7 @@ module.exports={
     getBanners:async(req,res)=>{
         try{
             const banners = await bannerService.getBanners()
-            if(banners.length>0){
+            if(banners.length<0){
                 return res.status(statusCode.BAD_REQUEST).send(util.fail(statusCode.BAD_REQUEST,responseMessage.NULL_VALUE))
             }
             return res.status(statusCode.OK).send(util.success(statusCode.OK,responseMessage.BANNER_SUCCESS,banners))
