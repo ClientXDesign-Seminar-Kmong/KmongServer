@@ -9,5 +9,11 @@ module.exports={
     RECOMMEND_SUCCESS:"추천리스트불러오기 성공",
 
     SERVICE_TOP_FAIL:"서비스 상단 정보 불러오기 실패",
-    SERVICE_TOP_SUCCESS:"서비스 상단 정보 불러오기 성공"
+    SERVICE_TOP_SUCCESS:"서비스 상단 정보 불러오기 성공",
+
+    SERVICE_DESCRIPTION_FAIL:"서비스 설명 정보 불러오기 실패",
+    SERVICE_DESCRIPTION_SUCCESS:"서비스 설명 정보 불러오기 성공",
+
+    SERVICE_SIMILAR_IMG_FAIL:"유사 서비스 가져오기 실패",
+    SERVICE_SIMILAR_IMG_SUCCESS:"유사 서비스 가져오기 성공"
 }
