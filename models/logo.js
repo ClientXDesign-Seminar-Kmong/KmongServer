@@ -9,6 +9,9 @@ module.exports=function async(sequelize,DataTypes){
         },
         subContent:{
             type : DataTypes.STRING,
+            get:function(){
+                return JSON.parse(this.getDataValue('subContent'))
+            }
         },
         deadline:{
             type : DataTypes.INTEGER,
