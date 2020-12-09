@@ -15,5 +15,11 @@ module.exports={
     SERVICE_DESCRIPTION_SUCCESS:"서비스 설명 정보 불러오기 성공",
 
     SERVICE_SIMILAR_IMG_FAIL:"유사 서비스 가져오기 실패",
-    SERVICE_SIMILAR_IMG_SUCCESS:"유사 서비스 가져오기 성공"
+    SERVICE_SIMILAR_IMG_SUCCESS:"유사 서비스 가져오기 성공",
+
+    SERVICE_OPTION_FAIL:"서비스 옵션 가져오기 실패",
+    SERVICE_OPTION_SUCCESS:"서비스 옵션 가져오기 성공",
+
+    SERVICE_OPTION_SET_FAIL:"서비스 옵션 받기 실패",
+    SERVICE_OPTION_SET_SUCCESS:"서비스 옵션 받기 성공"
 }

@@ -12,7 +12,7 @@ module.exports=function async(sequelize,DataTypes){
         review:{
             type : DataTypes.STRING,
         },
-        reviewData:{
+        reviewDate:{
             type : DataTypes.DATEONLY
         },
     },{
