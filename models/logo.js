@@ -23,6 +23,7 @@ module.exports=function async(sequelize,DataTypes){
             type : DataTypes.INTEGER,
         }
     },{
-        freezeTableName:true
+        freezeTableName:true,
+        timestamps:false
     })
 }

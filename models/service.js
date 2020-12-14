@@ -26,6 +26,7 @@ module.exports=function async(sequelize,DataTypes){
             type:DataTypes.STRING
         }
     },{
-        freezeTableName:true
+        freezeTableName:true,
+        timestamps:false
     })
 }
