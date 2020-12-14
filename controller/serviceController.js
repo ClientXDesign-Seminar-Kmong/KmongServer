@@ -12,7 +12,6 @@ module.exports={
         }catch(err){
             return res.status(statusCode.INTERNAL_SERVER_ERROR).send(util.fail(statusCode.INTERNAL_SERVER_ERROR,responseMessage.SERVICE_TOP_FAIL))
         }
-        
     },
     serviceDescription:async(req,res)=>{
         const {idx} = req.params
