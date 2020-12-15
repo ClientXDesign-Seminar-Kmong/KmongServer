@@ -4,6 +4,9 @@ module.exports=function async(sequelize,DataTypes){
             type : DataTypes.INTEGER,
             allowNull:false
         },
+        title:{
+            type : DataTypes.STRING,
+        },
         content:{
             type : DataTypes.STRING,
         },

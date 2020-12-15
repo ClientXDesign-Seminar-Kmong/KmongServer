@@ -5,9 +5,9 @@ const {logoService} = require('../service')
 
 module.exports={
     serviceOption:async(req,res)=>{
-        const {idx, logo} = req.params
+        const {idx} = req.params
         try{
-            const option = await logoService.getOption(idx,logo)
+            const option = await logoService.getOption(idx)
             return res.status(statusCode.OK).send(util.success(statusCode.OK,responseMessage.SERVICE_OPTION_SUCCESS,option))
         }catch(err){
             return res.status(statusCode.INTERNAL_SERVER_ERROR).send(util.fail(statusCode.INTERNAL_SERVER_ERROR,responseMessage.SERVICE_OPTION_FAIL))

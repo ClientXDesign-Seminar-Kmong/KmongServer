@@ -7,7 +7,7 @@ const reviewController = require('../../controller/reviewController')
 
 router.get('/:idx',serviceController.serviceTop)//현종
 router.get('/:idx/description',serviceController.serviceDescription)//현종
-router.get('/:idx/option/:logo',optionController.serviceOption)//주은
+router.get('/:idx/option',optionController.serviceOption)//주은
 router.post('/:idx/option',optionController.setServiceOption)//주은
 router.get('/:idx/expert',userController.userInfo)//주은
 router.get('/:idx/review',reviewController.reviewDetail)//주은
