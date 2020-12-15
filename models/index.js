@@ -25,7 +25,7 @@ db.Logo.belongsTo(db.Service)
 db.Service.hasMany(db.Review,{onDelete:'cascade'})
 db.Review.belongsTo(db.Service)
 
-db.Service.hasMany(db.ServiceImg,{onDelete:'cascade'})
+db.Service.hasMany(db.ServiceImg,{onDelete:'cascade', as:'serviceImgs'})
 db.ServiceImg.belongsTo(db.Service)
 
 db.Service.belongsToMany(db.User,{through:'Like'})

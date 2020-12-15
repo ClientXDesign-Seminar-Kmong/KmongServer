@@ -13,6 +13,7 @@ module.exports = {
             attributes: ['title', 'id', 'star', 'review', 'heart', 'price', 'layer'],
             include: [{
                 model: ServiceImg,
+                as:'serviceImgs',
                 attributes: ['id', 'img']
             }]
         })
